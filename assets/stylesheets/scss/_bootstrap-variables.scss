@@ -1,0 +1,39 @@
+// Main colors
+$brand-primary: #0E3F7A;
+$brand-success: #13BF80;
+$brand-info: #03CEA4;
+$brand-danger: #FE4F03;
+
+$gray-darker: #1D1D1D; // footer bg
+$gray-dark: #393F4C; // used for tooltips, badge
+$gray: #747373; // text in footer
+$gray-light: #9C9FA6; //text muted
+$gray-lighter: #DBDBDB; // used in help icons
+
+$white: #FFFFFF;
+
+
+$button-default-border: #B2C1D4;
+$text-muted: $gray-light;
+
+$subtitle-color: #A7B2C5; // subtitle on the blue bg
+
+
+// Navbar
+$navbar-inverse-bg: #1B3580;
+$navbar-inverse-border: $navbar-inverse-bg;
+$navbar-inverse-link-color: #A8ADC5;
+
+$navbar-inverse-toggle-hover-bg:            transparent;
+$navbar-inverse-toggle-icon-bar-bg:         #fff;
+$navbar-inverse-toggle-border-color:        $navbar-inverse-border;
+
+//footer
+$footer-muted-links: #535353;
+$footer-menu-links: #AAA9A9;
+
+body {
+  $navbar-height: 50px;
+  padding-top: $navbar-height; // required for fixed navbar
+  position: relative; // required for the scroll spy
+}

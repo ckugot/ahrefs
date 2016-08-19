@@ -1,0 +1,38 @@
+// Site sections styling
+$section-spacing: 100px;
+
+section {
+  @extend %section-spacing;
+
+  &.bg-blue {
+    background-color: $brand-primary;
+    color: $white;
+    $headings-color: $white;
+    $text-color: $white;
+    $link-color: $white;
+  }
+}
+
+footer {
+  @extend %section-spacing;
+  background-color: $gray-darker;
+  color: $gray;
+
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-light;
+    }
+  }
+}
+
+%section-spacing {
+  padding: {
+    top: $section-spacing;
+    bottom: $section-spacing;
+  }
+}
+
+.btn-primary.navbar-btn {
+  @include button-variant(#A8AEC7, transparent, #697CAD);
+}

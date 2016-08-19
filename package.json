@@ -1,0 +1,21 @@
+{
+  "name": "ahrefs",
+  "version": "1.0.0",
+  "description": "Ahrefs Homework",
+  "author": "Constantine Kugot <ck@wantpromo.com>",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ckugot/ahrefs.git"
+  },
+  "scripts": {
+    "start": "gulp scss"
+  },
+  "registry": "https://registry.npmjs.org",
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-clean-css": "^2.0.6",
+    "gulp-ruby-sass":"^2.0.6"
+  },
+  "private": true
+}

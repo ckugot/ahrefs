@@ -1,0 +1,74 @@
+// nav tools
+.tools-tabs {
+  border-bottom: none;
+  > li {
+    float: none;
+    display: inline-block;
+    text-align: justify;
+
+    .tab-icon {
+      background-color: $brand-success;
+      border-radius: $border-radius-large * 3;
+      padding: 10px;
+      margin: {
+        top: 0;
+        right: auto;
+        bottom: 10px;
+        left: auto;
+      }
+      @include square(70px);
+      box-sizing: border-box;
+      margin-bottom: $line-height-computed;
+    }
+    > a {
+      text-align: center;
+      font-weight: bold;
+      line-height: $line-height-base;
+      border: 1px solid transparent;
+      min-width: 150px;
+      &:hover {
+        border-color: transparent;
+        background-color: transparent;
+      }
+    }
+
+    &.active {
+      .tab-icon {
+        background-color: $brand-primary;
+      }
+      > a {
+        &,
+        &:hover,
+        &:focus {
+          color: $text-color;
+          background-color: $nav-tabs-active-link-hover-bg;
+          border: 1px solid transparent;
+          border-bottom-color: $brand-primary;
+        }
+      }
+    }
+  }
+
+}
+
+.tools-content:before {
+  content: '';
+  position: absolute;
+  display: block;
+  border-top: 1px solid $gray-lighter;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.tools-screenshot {
+  overflow: hidden;
+  padding: 0 16px;
+  margin: 0 -16px;
+  img {
+    height: 500px;
+    width: auto;
+    border-radius: 5px;
+    box-shadow: 0 24px 16px rgba(0,0,0, .13);
+  }
+}

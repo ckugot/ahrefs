@@ -1,0 +1,249 @@
+!!! 5
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{http:{equiv: 'X-UA-Compatible'}, content: 'IE=edge'}
+    %meta{name: 'viewport', content: 'width=device-width'}
+    %title
+      Ahrefs: SEO Backlink Checker &amp; Competitor Research Tools
+    %link{href: 'assets/stylesheets/style.css', rel: 'stylesheet'}
+    %script{src: '//code.jquery.com/jquery-1.11.1.min.js'}
+    %script{src: '//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'}
+
+  %body.has-navbar{data: {spy: 'scroll', target: '#navigation-main'}}
+    %nav.navbar.navbar-inverse.navbar-fixed-top#navigation-main
+      .container-fluid
+        .navbar-header
+          %button.navbar-toggle.collapsed{data: {toggle: 'collapse', target: '#ahrefs-navbar-collapse'}, type: 'button'}
+            %span.sr-only
+              Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          %a.navbar-brand{href: '/'}
+            %img{alt: 'Ahrefs', src: 'assets/images/logo.svg', width: '76'}
+
+        .collapse.navbar-collapse#ahrefs-navbar-collapse
+          %ul.nav.navbar-nav
+            %li
+              %a{href: '#section-tools'} Tools
+            %li
+              %a{href: '#section-plans-pricing'} Plans & Pricing
+            %li
+              %a{href: '/404.html'} Help
+            %li
+              %a{href: '/404.html'} About
+
+          .navbar-right
+            %a.btn.btn-primary.navbar-btn{href: '#'} Start free trial
+            %span.text-muted or
+            %a.btn.btn-link{href: '#'} Sign In
+
+    %section#section-intro
+      .container.text-center
+        %h1
+          <nobr>Powerful toolset for SEO</nobr> <nobr>and beyond</nobr>
+        %p.primary-text
+          Track your backlinks, keywords, brand mentions and know what your competitors are doing
+
+    %section#section-tools
+      .container
+        %h2.text-center
+          The tools you get with Ahrefs
+        %ul.nav.nav-tabs.tools-tabs{role: 'tablist'}
+          %li.active
+            %a{href: '#tools-site-explorer', data: {toggle: 'tab'} }
+              .tab-icon
+                %img{src: 'assets/images/tools/se.svg'}
+              .tab-title
+                Site Explorer
+          %li
+            %a{href: '#tools-position-explorer', data: {toggle: 'tab'} }
+              .tab-icon
+                %img{src: 'assets/images/tools/pe.svg'}
+              .tab-title
+                Position Explorer
+          %li
+            %a{href: '#tools-content-explorer', data: {toggle: 'tab'} }
+              .tab-icon
+                %img{src: 'assets/images/tools/ce.svg'}
+              .tab-title
+                Content Explorer
+          %li
+            %a{href: '#tools-position-tracker', data: {toggle: 'tab'} }
+              .tab-icon
+                %img{src: 'assets/images/tools/pt.svg'}
+              .tab-title
+                Position Tracker
+          %li
+            %a{href: '#tools-crawl-report', data: {toggle: 'tab'} }
+              .tab-icon
+                %img{src: 'assets/images/tools/cr.svg'}
+              .tab-title
+                Crawl Report
+          %li
+            %a{href: '#tools-ahrefs-alerts', data: {toggle: 'tab'} }
+              .tab-icon
+                %img{src: 'assets/images/tools/aa.svg'}
+              .tab-title
+                Ahrefs Alerts
+        .tab-content.tools-content
+          .tab-pane.fade#tools-site-explorer.in.active
+            .container
+              .row
+                .col-sm-4
+                  .tools-description
+                    %h3.tools-tool-title Site Explorer
+                    %p
+                      %strong
+                        The best backlink checker tool in the industry
+                    %p
+                      Take a detailed look at a backlink profile of any website or URL: what websites link to it, what anchors they use, how strong are these backlinks, etc.
+                    %p
+                      Track how backlinks amount grows over time and perform an in-depth backlink analysis using our advanced reports and handy filtering options.
+                .col-sm-8
+                  .tools-screenshot
+                    %img{src: 'assets/images/tools/screenshots/cr.jpg'}
+          .tab-pane.fade#tools-position-explorer
+            .container
+              .row
+                .col-sm-4
+                  .tools-description
+                    %h3.tools-tool-title Positions Explorer
+                    %p
+                      %strong
+                        Analyze your competitors' search traffic
+                    %p
+                      Get an email notification whenever you or your competitors get a new backlink or lose one. You’ll see exactly where any new backlinks are coming from.
+                    %p
+                      Ahrefs will also notify you whenever someone mentions your business or any keywords you want to monitor. Learn exactly what people are saying about you and your competitors in real time.
+                .col-sm-8
+                  .tools-screenshot
+                    %img{src: 'assets/images/tools/screenshots/pe.jpg'}
+          .tab-pane.fade#tools-content-explorer
+            .container
+              .row
+                .col-sm-4
+                  .tools-description
+                    %h3.tools-tool-title Content Explorer
+                    %p
+                      %strong
+                        Discover the content that's working well in your niche
+                    %p
+                      Find out what content is getting the most shares and backlinks so you can build a winning content strategy.
+                    %p
+                      You’ll see every site that's linking to a popular piece of content, so you can create a list of outreach targets for your linkbuilding campaign.
+                .col-sm-8
+                  .tools-screenshot
+                    %img{src: 'assets/images/tools/screenshots/ce.jpg'}
+          .tab-pane.fade#tools-position-tracker
+            .container
+              .row
+                .col-sm-4
+                  .tools-description
+                    %h3.tools-tool-title Position Tracker
+                    %p
+                      %strong
+                        Get accurate, daily ranking data
+                    %p
+                      Track your keyword rankings in all countries and languages, and find out how well you rank on mobile devices.
+                    %p
+                      We'll show you your position history over time and send you weekly/monthly ranking reports so you can track your progress without leaving your inbox.
+                .col-sm-8
+                  .tools-screenshot
+                    %img{src: 'assets/images/tools/screenshots/se.jpg'}
+          .tab-pane.fade#tools-crawl-report
+            .container
+              .row
+                .col-sm-4
+                  .tools-description
+                    %h3.tools-tool-title Crawl Report
+                    %p
+                      %strong
+                        Identify and fix common SEO issues on your site
+                    %p
+                      Run Crawl Reports with just a few clicks and Ahrefs will instantly identify any issues that may be hurting your visibility in search engines and tell you how to fix them.
+                    %p
+                      We'll check the response codes and loading speed of all your pages, ensuring that every page is perfectly optimised for search.
+                .col-sm-8
+                  .tools-screenshot
+                    %img{src: 'assets/images/tools/screenshots/cr.jpg'}
+          .tab-pane.fade#tools-ahrefs-alerts
+            .container
+              .row
+                .col-sm-4
+                  .tools-description
+                    %h3.tools-tool-title Ahrefs Alerts
+                    %p
+                      %strong
+                        Never miss another backlink or mention
+                    %p
+                      Get an email notification whenever you or your competitors get a new backlink or lose one. You’ll see exactly where any new backlinks are coming from.
+                    %p
+                      Ahrefs will also notify you whenever someone mentions your business or any keywords you want to monitor. Learn exactly what people are saying about you and your competitors in real time.
+                .col-sm-8
+                  .tools-screenshot
+                    %img{src: 'assets/images/tools/screenshots/aa.jpg'}
+
+    #section-plans-pricing
+      %section.bg-blue
+        .container
+          %h2.text-center
+            Plans & Pricing
+          %p Pick the package that suits you best and register your Ahrefs account
+          %ul.nav.nav-tabs
+            %li.active
+              %a{href: '#pricing-monthly', data: {toggle: 'tab'}}
+                Monthly pricing
+            %li
+              %a{href: '#pricing-annual', data: {toggle: 'tab'}}
+                Annual pricing
+          .tab-content
+            .tab-pane.fade#pricing-monthly.in.active
+              Lite/Standart/Advanced
+            .tab-pane.fade#pricing-annual
+              Check back later for annual plans
+          %p.text-center
+            %a{href: '/404.html'}
+              Compare the full list of features
+      %section
+        .container
+          %h2.text-center
+            Try Ahrefs for free
+          %p.text-center
+            Registering your trial will only take a few minutes and then you'll
+            be able to use all Ahrefs premium features for 14 days free of charge.
+          %p.text-center
+            %a.btn.btn-danger.btn-lg{href: '#'}
+              Start FREE 14-day trial
+
+    %footer
+      .container
+        .row
+
+          .col-xs-4
+            ahrefs fgooter logo
+          .col-xs-8
+            %ul.list-inline
+              %li
+                %a{href: '404.html'} About
+              %li
+                %a{href: '404.html'} Jobs
+              %li
+                %a{href: '404.html'} Affiliate
+              %li
+                %a{href: '404.html'} Help
+              %li
+                %a{href: '404.html'} Contact
+              %li
+                %a{href: '404.html'} English
+
+        %p.copyright
+          &copy; 2016 Ahrefs Pte Ltd. 16 Raffles Quay. #33-03 Hong Leong Building, Singapore
+        %ul
+          %li
+            %a{href: '404.html'} Terms &amp; Conditions
+          %li
+            %a{href: '404.html'} Privacy Policy
+
+
