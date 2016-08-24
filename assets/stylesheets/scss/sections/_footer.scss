@@ -1,0 +1,12 @@
+footer {
+  @extend %section-spacing;
+  background-color: $gray-darker;
+  color: $gray;
+
+  a {
+    color: $gray;
+    &:hover {
+      color: $gray-light;
+    }
+  }
+}

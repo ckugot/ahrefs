@@ -1,0 +1,91 @@
+#section-data {
+
+}
+
+.data-presentation {
+  $dig-lg: 120px;
+  $dig-md: 100px;
+  $dig-sm: 76px;
+  $dig-xs: 58px;
+
+  $dig-line-height: .8;
+
+  $desc-lg: floor($dig-lg * $dig-line-height * .5);
+  $desc-md: floor($dig-md * $dig-line-height * .5);
+  $desc-sm: floor($dig-sm * $dig-line-height * .5);
+  $desc-xs: floor($dig-xs * $dig-line-height * .5);
+
+  $digit-sizes: (xs: $dig-xs, sm: $dig-sm, md: $dig-md, lg: $dig-lg);
+  $desc-sizes: (xs: $desc-xs, sm: $desc-sm, md: $desc-md, lg: $desc-lg);
+
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  border: 2px solid mix($white, $brand-primary, 5%);
+  border-left: none;
+  border-right: none;
+
+  @include clearfix();
+
+  .data-highlight {
+    color: $brand-info;
+  }
+
+  li {
+    float: left;
+    white-space: nowrap;
+    padding: 2ex 3ex;
+    overflow: visible;
+    position: relative;
+    font-size: $desc-lg;
+
+    @include respond((font-size), $desc-sizes);
+    @include clearfix();
+
+    &:nth-of-type(even) {
+      border-left: 2px solid mix($white, $brand-primary, 5%);
+    }
+
+    label {
+      position: absolute;
+      top: 0;
+      font-weight: 400;
+      font-size: 50%;
+      background-color: $brand-primary;
+
+      margin: {
+        top: -1.7ex; // TODO responsive - quarter the digit size
+        left: 0;
+      }
+
+      padding: {
+        left: 1.5ex;
+        right: 1.5ex;
+      }
+    }
+
+
+    em {
+      font-style: normal;
+      display: block;
+      float: left;
+      line-height: 1.05;
+      font-weight: 900;
+    }
+
+
+    strong {
+      color: $brand-info;
+      display: block;
+      line-height: $dig-line-height;
+      float: left;
+      margin-right: .2ex;
+      vertical-align: top;
+      font-weight: 400;
+      font-size: $dig-lg;
+      @include respond((font-size), $digit-sizes);
+    }
+
+  }
+}

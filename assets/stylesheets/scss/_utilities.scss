@@ -1,0 +1,31 @@
+$breakpoints-media-expressions: (
+  xs: "(max-width: #{$screen-xs-max})",
+  sm: "(min-width: #{$screen-sm-min}) and (max-width: #{$screen-sm-max})",
+  md: "(min-width: #{$screen-md-min}) and (max-width: #{$screen-md-max})",
+  lg: "(min-width: #{$screen-lg-min})"
+);
+
+// Generate the @media queries from two maps: properties and values.
+// All breakpoints and properties are optional, for example:
+// $properties: (background-color font-size);
+// $values: (xs: bgColor1 fontSize1, md: null fontSize2, lg: bgColor3 );
+//
+@mixin respond($properties, $values) {
+  @each $breakpoint, $media-expression in $breakpoints-media-expressions {
+    @if map-has-key($values, $breakpoint) {
+      @media #{$media-expression} {
+        @if (length($properties)>1) {
+          @for $index from 1 through length($properties) {
+            $breakpoint-values: map-get($values, $breakpoint);
+            @if (length($breakpoint-values)>=$index) {
+              #{nth($properties, $index)}: #{nth($breakpoint-values, $index)}
+            }
+          }
+        }
+        @else {
+          #{$properties}: map-get($values, $breakpoint);
+        }
+      }
+    }
+  }
+}

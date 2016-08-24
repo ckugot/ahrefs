@@ -18,22 +18,31 @@ $text-muted: $gray-light;
 
 $subtitle-color: #A7B2C5; // subtitle on the blue bg
 
+// Typography
+$font-size-h2: 36px;
+$font-family-sans-serif:  "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 
 // Navbar
-$navbar-inverse-bg: #1B3580;
+$navbar-height: 68px;
+$navbar-inverse-bg: #1c3a84;
+$navbar-inverse-color: mix($white, $navbar-inverse-bg, 20%);
 $navbar-inverse-border: $navbar-inverse-bg;
-$navbar-inverse-link-color: #A8ADC5;
+$navbar-inverse-link-color: mix($white, $navbar-inverse-bg, 50%);
 
 $navbar-inverse-toggle-hover-bg:            transparent;
-$navbar-inverse-toggle-icon-bar-bg:         #fff;
+$navbar-inverse-toggle-icon-bar-bg:         mix($white, $navbar-inverse-bg, 50%);
 $navbar-inverse-toggle-border-color:        $navbar-inverse-border;
 
 //footer
 $footer-muted-links: #535353;
 $footer-menu-links: #AAA9A9;
 
+
+$border-radius-base:        3px;
+$border-radius-large:       3px;
+$border-radius-small:       3px;
+
 body {
-  $navbar-height: 50px;
   padding-top: $navbar-height; // required for fixed navbar
   position: relative; // required for the scroll spy
 }

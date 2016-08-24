@@ -1,0 +1,30 @@
+.navbar-inverse {
+  .text-muted {
+    color: $navbar-inverse-color;
+  }
+}
+
+.navbar-btn {
+  $or-spacing: 1ex;
+  &.btn-primary {
+    @include button-variant(
+        mix($white, $navbar-inverse-bg, 60%),
+        transparent,
+        mix($white, $navbar-inverse-bg, 50%)
+    );
+    margin-right: $or-spacing;
+  }
+
+  &.btn-link {
+    padding: {
+      left: 0;
+      right: 0;
+    }
+
+    margin: {
+      right: 20px;
+      left: $or-spacing;
+    }
+
+  }
+}

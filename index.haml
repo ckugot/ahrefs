@@ -35,20 +35,24 @@
               %a{href: '/404.html'} About
 
           .navbar-right
-            %a.btn.btn-primary.navbar-btn{href: '#'} Start free trial
+            %a.btn.navbar-btn.btn-primary{href: '#section-try'} Start free trial
             %span.text-muted or
-            %a.btn.btn-link{href: '#'} Sign In
+            %a.btn.navbar-btn.btn-link{href: '#'} Sign In
 
-    %section#section-intro
+    %section#section-intro.section-inverse
       .container.text-center
-        %h1
-          <nobr>Powerful toolset for SEO</nobr> <nobr>and beyond</nobr>
-        %p.primary-text
+        %h1.site-title
+          Powerful toolset for&nbsp;SEO and&nbsp;beyond
+        %p.site-subtitle
           Track your backlinks, keywords, brand mentions and know what your competitors are doing
+        %p
+          %a.btn.btn-lg.btn-danger{href: "#section-try"}
+            Start FREE 14-day trial
+        .laptop
 
     %section#section-tools
       .container
-        %h2.text-center
+        %h2.section-title
           The tools you get with Ahrefs
         %ul.nav.nav-tabs.tools-tabs{role: 'tablist'}
           %li.active
@@ -185,44 +189,83 @@
                   .tools-screenshot
                     %img{src: 'assets/images/tools/screenshots/aa.jpg'}
 
-    #section-plans-pricing
-      %section.bg-blue
-        .container
-          %h2.text-center
-            Plans & Pricing
-          %p Pick the package that suits you best and register your Ahrefs account
-          %ul.nav.nav-tabs
-            %li.active
-              %a{href: '#pricing-monthly', data: {toggle: 'tab'}}
-                Monthly pricing
-            %li
-              %a{href: '#pricing-annual', data: {toggle: 'tab'}}
-                Annual pricing
-          .tab-content
-            .tab-pane.fade#pricing-monthly.in.active
-              Lite/Standart/Advanced
-            .tab-pane.fade#pricing-annual
-              Check back later for annual plans
-          %p.text-center
-            %a{href: '/404.html'}
-              Compare the full list of features
-      %section
-        .container
-          %h2.text-center
-            Try Ahrefs for free
-          %p.text-center
-            Registering your trial will only take a few minutes and then you'll
-            be able to use all Ahrefs premium features for 14 days free of charge.
-          %p.text-center
-            %a.btn.btn-danger.btn-lg{href: '#'}
-              Start FREE 14-day trial
+    %section#section-data-presentation.section-inverse
+      .container
+        %h2.section-title
+          The biggest and most accurate database of&nbsp;live backlinks
+        %ul.data-presentation
+          %li
+            %label Every day we crawl
+            %strong 5
+            %em
+              %span.data-highlight billion
+              <br>web pages
+          %li
+            %label Our index size:
+            %strong 12
+            %em
+              %span.data-highlight trillion
+              <br>known links
+          %li
+            %strong 200
+            %em
+              %span.data-highlight million
+              root<br>domains
+          %li
+            %strong 2
+            %em
+              %span.data-highlight trillion
+              <br>known URLs
+          %li
+            %label Powered by:
+            %strong 10
+            %em
+              petabytes<br>of storage
+          %li
+            %strong 5000
+            %em CPU<br>cores
+
+
+    %section#section-testimonials
+
+
+    %section#section-plans-pricing.section-inverse
+      .container
+        %h2.section-title
+          Plans & Pricing
+        %p Pick the package that suits you best and register your Ahrefs account
+        %ul.nav.nav-tabs
+          %li.active
+            %a{href: '#pricing-monthly', data: {toggle: 'tab'}}
+              Monthly pricing
+          %li
+            %a{href: '#pricing-annual', data: {toggle: 'tab'}}
+              Annual pricing
+        .tab-content
+          .tab-pane.fade#pricing-monthly.in.active
+            Lite/Standart/Advanced
+          .tab-pane.fade#pricing-annual
+            Check back later for annual plans
+        %p.text-center
+          %a{href: '/404.html'}
+            Compare the full list of features
+    %section#section-try
+      .container
+        %h2.section-title
+          Try Ahrefs for free
+        %p.text-center
+          Registering your trial will only take a few minutes and then you'll
+          be able to use all Ahrefs premium features for 14 days free of charge.
+        %p.text-center
+          %a.btn.btn-danger.btn-lg{href: '404.html'}
+            Start FREE 14-day trial
 
     %footer
       .container
         .row
 
           .col-xs-4
-            ahrefs fgooter logo
+            ahrefs footer logo
           .col-xs-8
             %ul.list-inline
               %li
@@ -245,5 +288,3 @@
             %a{href: '404.html'} Terms &amp; Conditions
           %li
             %a{href: '404.html'} Privacy Policy
-
-
