@@ -1,8 +1,4 @@
-#section-data {
-
-}
-
-.data-presentation {
+#section-data-presentation {
   $dig-lg: 120px;
   $dig-md: 100px;
   $dig-sm: 76px;
@@ -18,74 +14,92 @@
   $digit-sizes: (xs: $dig-xs, sm: $dig-sm, md: $dig-md, lg: $dig-lg);
   $desc-sizes: (xs: $desc-xs, sm: $desc-sm, md: $desc-md, lg: $desc-lg);
 
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .data-presentation-wrapper {
+    border: 2px solid mix($white, $brand-primary, 5%);
+    border-left: none;
+    border-right: none;
+    position: relative;
 
-  border: 2px solid mix($white, $brand-primary, 5%);
-  border-left: none;
-  border-right: none;
+    &:before,
+    &:after {
+      width: 100%;
+      position: absolute;
+      content: "";
+      display: block;
+      border: 1px solid mix($white, $brand-primary, 5%);
+    }
 
-  @include clearfix();
-
-  .data-highlight {
-    color: $brand-info;
+    &:before {
+      top: 33%;
+    }
+    &:after {
+      bottom: 33%;
+    }
   }
 
-  li {
-    float: left;
-    white-space: nowrap;
-    padding: 2ex 3ex;
-    overflow: visible;
-    position: relative;
-    font-size: $desc-lg;
+  .data-presentation {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 
-    @include respond((font-size), $desc-sizes);
     @include clearfix();
 
-    &:nth-of-type(even) {
-      border-left: 2px solid mix($white, $brand-primary, 5%);
-    }
-
-    label {
-      position: absolute;
-      top: 0;
-      font-weight: 400;
-      font-size: 50%;
-      background-color: $brand-primary;
-
-      margin: {
-        top: -1.7ex; // TODO responsive - quarter the digit size
-        left: 0;
-      }
-
-      padding: {
-        left: 1.5ex;
-        right: 1.5ex;
-      }
-    }
-
-
-    em {
-      font-style: normal;
-      display: block;
-      float: left;
-      line-height: 1.05;
-      font-weight: 900;
-    }
-
-
-    strong {
+    .data-highlight {
       color: $brand-info;
-      display: block;
-      line-height: $dig-line-height;
-      float: left;
-      margin-right: .2ex;
-      vertical-align: top;
-      font-weight: 400;
-      font-size: $dig-lg;
-      @include respond((font-size), $digit-sizes);
     }
 
+    li {
+      float: left;
+      white-space: nowrap;
+      padding: 2ex 3ex;
+      overflow: visible;
+      position: relative;
+      font-size: $desc-lg;
+
+      @include respond((font-size), $desc-sizes);
+
+      &:nth-of-type(even) {
+        border-left: 2px solid mix($white, $brand-primary, 5%);
+      }
+
+      label {
+        position: absolute;
+        top: 0;
+        font-weight: 400;
+        font-size: 50%;
+        background-color: $brand-primary;
+
+        margin: {
+          top: -1.7ex; // TODO responsive - quarter the digit size
+          left: 0;
+        }
+
+        padding: {
+          left: 1.5ex;
+          right: 1.5ex;
+        }
+      }
+
+      em {
+        font-style: normal;
+        display: block;
+        float: left;
+        line-height: 1.05;
+        font-weight: 900;
+      }
+
+      strong {
+        color: $brand-info;
+        display: block;
+        line-height: $dig-line-height;
+        float: left;
+        margin-right: .2ex;
+        vertical-align: top;
+        font-weight: 400;
+        font-size: $dig-lg;
+        @include respond((font-size), $digit-sizes);
+      }
+
+    }
   }
 }
