@@ -14,11 +14,15 @@
   $digit-sizes: (xs: $dig-xs, sm: $dig-sm, md: $dig-md, lg: $dig-lg);
   $desc-sizes: (xs: $desc-xs, sm: $desc-sm, md: $desc-md, lg: $desc-lg);
 
+  $group-border: 2px solid mix($white, $brand-primary, 5%);
+
   .data-presentation-wrapper {
     border: 2px solid mix($white, $brand-primary, 5%);
     border-left: none;
     border-right: none;
     position: relative;
+
+    @include respond((border-top), (xs: none));
 
     &:before,
     &:after {
@@ -26,15 +30,18 @@
       position: absolute;
       content: "";
       display: block;
-      border: 1px solid mix($white, $brand-primary, 5%);
+      border-top: $group-border;
+      @include respond((display), (xs: none));
     }
 
     &:before {
       top: 33%;
     }
+
     &:after {
       bottom: 33%;
     }
+
   }
 
   .data-presentation {
@@ -56,11 +63,15 @@
       position: relative;
       font-size: $desc-lg;
 
-      @include respond((font-size), $desc-sizes);
-
       &:nth-of-type(even) {
-        border-left: 2px solid mix($white, $brand-primary, 5%);
+        border-left: $group-border;
+        @include respond((border-left), (xs: none));
       }
+
+      @include respond((font-size, padding-left, padding-right, border-left, border-top, width),
+        map_merge($desc-sizes, (xs: $desc-xs 1ex 1ex none $group-border 100%))
+      );
+
 
       label {
         position: absolute;
