@@ -33,14 +33,20 @@ $navbar-inverse-toggle-hover-bg:            transparent;
 $navbar-inverse-toggle-icon-bar-bg:         mix($white, $navbar-inverse-bg, 50%);
 $navbar-inverse-toggle-border-color:        $navbar-inverse-border;
 
-//footer
+// Footer
 $footer-muted-links: #535353;
 $footer-menu-links: #AAA9A9;
 
-
+// Border Radius
 $border-radius-base:        3px;
 $border-radius-large:       3px;
 $border-radius-small:       3px;
+
+// Carousels
+$carousel-indicator-active-bg:    $brand-info;
+$carousel-indicator-border-color: $brand-info;
+// Custom variable
+$carousel-indicator-bg: #EBECEC;
 
 body {
   padding-top: $navbar-height; // required for fixed navbar

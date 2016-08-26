@@ -1,9 +1,47 @@
 #section-plans-pricing {
+  $brand-20: mix($white, $brand-primary, 20%);
+
   background: {
-    color: $navbar-inverse-bg;
+    color: $brand-primary;
     image: url("../images/backgrounds/bg-prices.jpg");
     repeat: no-repeat;
     position: bottom center;
     size: cover;
   }
+
+  .section-subtitle {
+    color: mix($white, $navbar-inverse-bg, 50%);
+  }
+
+  .nav-pills {
+    display: inline-block;
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    border: 1px solid $brand-20;
+    > li {
+
+      + li {
+        margin-left: 0;
+      }
+
+      > a {
+        color: $white;
+        border-radius: 0;
+        cursor: pointer;
+
+        &:hover {
+          background-color: mix($white, $brand-primary, 10%);
+        }
+      }
+
+      &.active {
+        > a {
+          background-color: $brand-20;
+          cursor: default;
+        }
+      }
+    }
+
+  }
+
 }

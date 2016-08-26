@@ -17,6 +17,14 @@ section {
     $headings-color: $white;
     $text-color: $white;
     $link-color: $white;
+
+    a {
+      color: $white;
+    }
+
+    .section-subtitle {
+      color: mix($white, $navbar-inverse-bg, 50%);
+    }
   }
 }
 
@@ -24,8 +32,39 @@ section {
   font-size: 48px;
   font-weight: 900;
   text-align: center;
+  margin:{
+    top: 0;
+    bottom: 2ex;
+    left: auto;
+    right: auto;
+  }
+
+  @include respond((font-size max-width), (
+    xs: 26px $screen-xs*.8,
+    sm: 30px $screen-sm*.75,
+    md: 36px $screen-md*.6,
+    lg: 48px $screen-lg*.6)
+  );
 }
 
 
+.section-subtitle {
+  font-size: $font-size-h4;
+  text-align: center;
+  margin: {
+    left: auto;
+    right: auto;
+  }
 
+  @include respond((font-size max-width), (
+    xs: 14px $screen-xs*.65,
+    sm: 16px $screen-sm*.45,
+    md: 18px $screen-md*.4,
+    lg: 21px $screen-lg*.4)
+  );
 
+}
+
+.section-inverse {
+
+}

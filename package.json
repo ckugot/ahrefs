@@ -8,14 +8,18 @@
     "url": "git@github.com:ckugot/ahrefs.git"
   },
   "scripts": {
-    "start": "gulp scss"
+    "start": "gulp default"
   },
   "registry": "https://registry.npmjs.org",
   "dependencies": {
+    "bootstrap-carousel-swipe": "^0.0.6",
+    "bootstrap-sass": "^3.3.7",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-clean-css": "^2.0.6",
-    "gulp-ruby-sass":"^2.0.6"
+    "gulp-concat": "^2.6.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-uglify": "^2.0.0"
   },
   "private": true
 }

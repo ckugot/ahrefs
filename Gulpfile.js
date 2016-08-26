@@ -1,17 +1,17 @@
-// Copy assets/vendors/bootstrap/assets/fonts/bootstrap -> assets/fonts
-// Copy assets/vendors/bootstrap/assets/javascripts/bootstrap.min.js -> assets/javascripts
-// Process SASS (autoprefixer. minify,
-
-
 'use strict';
 
 const gulp = require('gulp');
 const sass = require('gulp-ruby-sass');
 const cleanCss = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
-const watcher = gulp.watch('./assets/stylesheets/scss/**/*.scss', ['scss']);
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
-gulp.task('scss', function () {
+gulp.watch('./assets/stylesheets/scss/**/*.scss', ['scss']);
+
+gulp.task('default', ['vendors','scss']);
+
+gulp.task('scss', function() {
     return sass('./assets/stylesheets/scss/**/*.scss', {
         precision: 6,
         scss: true,
@@ -30,10 +30,18 @@ gulp.task('scss', function () {
             cascade: false
         }))
         .pipe(gulp.dest('./assets/stylesheets'));
-
 });
 
+gulp.task('vendors', function() {
+    // Concat, minify and copyJS
+    gulp.src([
+            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+            './node_modules/bootstrap-carousel-swipe/carousel-swipe.js'
+        ])
+//        .pipe(uglify())
+        .pipe(gulp.dest('./assets/javascripts/'));
 
-watcher.on('change', function (event) {
-    console.log(event.path.replace(/^.*[\\\/]/, '') + " has " + event.type);
+    // Copy Bootstrap fonts
+    gulp.src('./node_modules/bootstrap-sass/assets/fonts/bootstrap/*')
+        .pipe(gulp.dest('./assets/fonts'))
 });

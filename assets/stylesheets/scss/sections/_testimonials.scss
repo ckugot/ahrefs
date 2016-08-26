@@ -1,0 +1,11 @@
+#section-testimonials {
+  .media-object.img-rounded {
+    border-radius: 18px;
+    @include square(71px);
+  }
+  .carousel-inner {
+    .item {
+      width: 100%;
+    }
+  }
+}

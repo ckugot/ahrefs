@@ -1,52 +1,81 @@
 // nav tools
+
+
+
 .tools-tabs {
-  border-bottom: none;
-  > li {
-    float: none;
-    display: inline-block;
-    text-align: justify;
+  &.carousel-indicators {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    z-index: inherit;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    list-style: none;
+    text-align: center;
+    display: table;
 
-    .tab-icon {
-      background-color: $brand-success;
-      border-radius: $border-radius-large * 3;
-      padding: 10px;
-      margin: {
-        top: 0;
-        right: auto;
-        bottom: 10px;
-        left: auto;
-      }
-      @include square(70px);
-      box-sizing: border-box;
-      margin-bottom: $line-height-computed;
-    }
-    > a {
-      text-align: center;
-      font-weight: bold;
-      line-height: $line-height-base;
-      border: 1px solid transparent;
-      min-width: 150px;
-      &:hover {
-        border-color: transparent;
-        background-color: transparent;
-      }
-    }
+    li {
+      float: none;
+      display: table-cell;
+      width: floor(100%/6);
+      height: auto;
+      margin: 0;
+      text-indent: 0;
+      border: none;
+      border-radius: 0;
+      background: none;
+      cursor: default;
 
-    &.active {
       .tab-icon {
-        background-color: $brand-primary;
+        background-color: $brand-success;
+        border-radius: $border-radius-large * 3;
+        padding: 10px;
+        margin: {
+          top: 0;
+          right: auto;
+          bottom: 10px;
+          left: auto;
+        }
+
+        @include square(70px);
+        box-sizing: border-box;
+        margin-bottom: $line-height-computed;
       }
+
       > a {
-        &,
-        &:hover,
-        &:focus {
-          color: $text-color;
-          background-color: $nav-tabs-active-link-hover-bg;
-          border: 1px solid transparent;
-          border-bottom-color: $brand-primary;
+        text-align: center;
+        font-weight: bold;
+        line-height: $line-height-base;
+        border: none;
+        min-width: 150px;
+        cursor: pointer;
+        &:hover {
+          text-decoration: none;
+          background-color: transparent;
         }
       }
+
+      &.active {
+        background: none; // indicator override
+        .tab-icon {
+          background-color: $brand-primary;
+        }
+
+        > a {
+          &,
+          &:hover,
+          &:focus {
+            color: $text-color;
+            background-color: $nav-tabs-active-link-hover-bg;
+            border-bottom-color: $brand-primary;
+          }
+        }
+      }
+
     }
+
   }
 
 }

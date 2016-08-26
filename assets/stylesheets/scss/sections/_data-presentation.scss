@@ -16,6 +16,13 @@
 
   $group-border: 2px solid mix($white, $brand-primary, 5%);
 
+
+  background: {
+    image: url("../images/backgrounds/bg-pixels.png");
+    position: top center;
+
+  }
+
   .data-presentation-wrapper {
     border: 2px solid mix($white, $brand-primary, 5%);
     border-left: none;
@@ -31,6 +38,7 @@
       content: "";
       display: block;
       border-top: $group-border;
+      z-index: 0;
       @include respond((display), (xs: none));
     }
 
@@ -75,6 +83,7 @@
 
       label {
         position: absolute;
+        z-index: 1;
         top: 0;
         font-weight: 400;
         font-size: 50%;
