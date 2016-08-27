@@ -1,6 +1,5 @@
 #section-tools {
-  @include respond((overflow-x),(xs: visible));
-
+  @include respond((overflow-x overflow-y),(xs: visible hidden));
   padding-bottom: 0;
 
   .section-title {

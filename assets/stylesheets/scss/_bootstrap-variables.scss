@@ -61,6 +61,13 @@ $badge-bg: $gray-dark;
 $badge-border-radius: 2px;
 $badge-font-weight: 900;
 
+// Tooltip
+$tooltip-bg: $gray-dark;
+$tooltip-opacity: 1;
+$tooltip-arrow-width: 12px;
+$tooltip-color: $gray-lightest;
+$tooltip-max-width: 275px;
+
 body {
   padding-top: $navbar-height; // required for fixed navbar
   position: relative; // required for the scroll spy

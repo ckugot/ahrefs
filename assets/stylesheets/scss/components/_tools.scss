@@ -1,9 +1,4 @@
-// nav tools
-
-
-
 .tools-tabs {
-
 
   &.carousel-indicators {
     position: relative;
@@ -23,7 +18,7 @@
 
     border-bottom: 1px solid $gray-lighter;
 
-    @include respond((width border left position margin-top), (xs: (60px, none, -15px, absolute, 20px) ));
+    @include respond((width border left position margin-top), (xs: (60px, none, -15px, absolute, 20px)));
 
     li {
       float: left;
@@ -38,7 +33,7 @@
 
       width: floor(100%/6);
 
-      @include respond((width font-size margin-bottom), (xs: 60px 12px 13px, sm: floor(100%/3) ));
+      @include respond((width font-size margin-bottom), (xs: 60px 12px 13px, sm: floor(100%/3)));
 
       .tab-icon {
         background-color: $brand-success;
@@ -55,7 +50,7 @@
         @include square(70px);
         @include respond(
               (width height margin-bottom padding border-radius),
-              (xs: (55px, 40px, 3px, 3px, 5px) ));
+            (xs: (55px, 40px, 3px, 3px, 5px)));
         img {
           @include size(auto, 100%);
         }
@@ -95,7 +90,7 @@
           bottom: 0;
           // same width as item
           width: floor(100%/6);
-          @include respond((width display), (xs: null none, sm: floor(100%/3) ));
+          @include respond((width display), (xs: null none, sm: floor(100%/3)));
         }
 
         .tab-icon {
@@ -133,13 +128,16 @@
   vertical-align: bottom;
   padding: 0 16px;
   margin: 0 -16px;
-  @include respond((margin-right overflow margin-top margin-bottom),(xs: -30px visible 20px 25px));
+  @include respond(
+        (overflow margin-top margin-bottom),
+        (xs: hidden 20px 60px)
+  );
 
   img {
     height: 500px;
     width: auto;
     border-radius: 5px;
-    box-shadow: 0 24px 16px rgba(0,0,0, .13);
-    @include respond((height width),(xs: auto 120%, sm: 430px));
+    box-shadow: 0 24px 16px rgba(0, 0, 0, .13);
+    @include respond((height width box-shadow border-radius), (xs: auto 100% none 2px, sm: 430px));
   }
 }

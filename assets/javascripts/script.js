@@ -36,6 +36,7 @@ $(function($){
     $(window).on('load', function(){
         $('#testimonials-carousel .item').equalHeights();
         $('#tools-carousel .item').equalHeights();
+        $('[data-toggle="tooltip"]').tooltip();
     });
 
 });

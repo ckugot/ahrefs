@@ -21,6 +21,7 @@
   .carousel-inner {
     .item {
       transition-property: opacity;
+      width: 100%;
     }
     .item,
     .active.left,
