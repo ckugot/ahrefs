@@ -1,8 +1,19 @@
 .carousel-indicators {
+  bottom: -20px;
   li {
     background-color: $carousel-indicator-bg;
     border: 1px solid $carousel-indicator-bg;
     cursor: pointer;
+    margin: {
+      left: 6px;
+      right: 6px;
+    }
+    &.active {
+      margin: {
+        left: 6px;
+        right: 6px;
+      }
+    }
   }
 }
 

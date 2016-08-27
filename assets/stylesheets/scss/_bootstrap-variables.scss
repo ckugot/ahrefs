@@ -10,6 +10,8 @@ $gray: #747373; // text in footer
 $gray-light: #9C9FA6; //text muted
 $gray-lighter: #DBDBDB; // used in help icons
 
+$gray-lightest: #AAA9A9; // custom variable - footer
+
 $white: #FFFFFF;
 
 
@@ -47,6 +49,17 @@ $carousel-indicator-active-bg:    $brand-info;
 $carousel-indicator-border-color: $brand-info;
 // Custom variable
 $carousel-indicator-bg: #EBECEC;
+
+$icon-font-path: '../fonts/';
+
+// Buttons
+$btn-default-color: $brand-primary;
+$btn-default-border: mix($brand-primary, $white, 32%);
+
+// Badge
+$badge-bg: $gray-dark;
+$badge-border-radius: 2px;
+$badge-font-weight: 900;
 
 body {
   padding-top: $navbar-height; // required for fixed navbar

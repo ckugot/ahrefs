@@ -23,11 +23,16 @@
 
   }
 
+  .section-title {
+    margin-bottom: 3ex;
+  }
+
   .data-presentation-wrapper {
     border: 2px solid mix($white, $brand-primary, 5%);
     border-left: none;
     border-right: none;
     position: relative;
+    color: $white;
 
     @include respond((border-top), (xs: none));
 

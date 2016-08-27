@@ -1,0 +1,17 @@
+.list-cheklist {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    padding-left: 24px;
+    background: {
+      image: url('../images/checkmark.svg');
+      position: 1px 4px;
+      size: 14px 14px;
+      repeat: no-repeat;
+    }
+  }
+
+
+}

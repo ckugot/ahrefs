@@ -34,6 +34,15 @@
     );
   }
 
+  .section-subtitle {
+    @include respond((font-size max-width), (
+      xs: 14px $screen-xs*.65,
+      sm: 16px $screen-sm*.45,
+      md: 18px $screen-md*.4,
+      lg: 21px $screen-lg*.4)
+    );
+  }
+
   .laptop {
     width: 100%;
     display: block;

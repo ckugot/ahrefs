@@ -1,11 +1,66 @@
 #section-testimonials {
+
+  .section-title {
+    height: 50px;
+    text-indent: -9999px;
+    overflow: hidden;
+    margin-bottom: 60px;
+    background: {
+      image: url('../images/quote.svg');
+      repeat: no-repeat;
+      position: center center;
+      size: contain;
+    }
+    @include respond((height, margin-bottom),(xs: 35px 30px, sm: 40px 40px))
+  }
+
   .media-object.img-rounded {
     border-radius: 18px;
     @include square(71px);
   }
+
   .carousel-inner {
     .item {
       width: 100%;
+
+    }
+
+    .media {
+      width: 250px;
+      overflow: hidden;
+      margin: {
+        left: auto;
+        right: auto;
+        bottom: 50px;
+      }
+
+    }
+    .media-left {
+      padding-right: 20px;
+    }
+    .media-heading {
+      font-weight: 900;
+      margin-top: 16px;
+    }
+
+    blockquote {
+      font-size: 28px;
+      max-width: $screen-lg * .8;
+      font-style: italic;
+      font-weight: 100;
+      border-left: none;
+      padding: 0;
+      text-align: center;
+      margin: {
+        left: auto;
+        right: auto;
+      }
+      @include respond((font-size max-width), (
+        xs: 20px,
+        sm: 26px $screen-sm*.9,
+        md: 28px $screen-md*.8)
+      );
     }
   }
+
 }

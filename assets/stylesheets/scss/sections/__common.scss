@@ -13,17 +13,30 @@ section {
 
   &.section-inverse {
     background-color: $brand-primary;
-    color: $white;
-    $headings-color: $white;
-    $text-color: $white;
-    $link-color: $white;
-
-    a {
+    h2 {
       color: $white;
     }
 
     .section-subtitle {
       color: mix($white, $navbar-inverse-bg, 50%);
+      a {
+        color: $white;
+        display: inline-block;
+        &:hover, &:focus {
+          text-decoration: none;
+          &:after {
+            border-top-color: mix($white, $navbar-inverse-bg, 40%);
+          }
+        }
+
+        &:after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 0;
+          border-top: 1px solid mix($white, $navbar-inverse-bg, 20%);
+        }
+      }
     }
   }
 }
@@ -32,9 +45,9 @@ section {
   font-size: 48px;
   font-weight: 900;
   text-align: center;
-  margin:{
+  margin: {
     top: 0;
-    bottom: 2ex;
+    bottom: 1ex;
     left: auto;
     right: auto;
   }
@@ -47,7 +60,6 @@ section {
   );
 }
 
-
 .section-subtitle {
   font-size: $font-size-h4;
   text-align: center;
@@ -55,13 +67,6 @@ section {
     left: auto;
     right: auto;
   }
-
-  @include respond((font-size max-width), (
-    xs: 14px $screen-xs*.65,
-    sm: 16px $screen-sm*.45,
-    md: 18px $screen-md*.4,
-    lg: 21px $screen-lg*.4)
-  );
 
 }
 

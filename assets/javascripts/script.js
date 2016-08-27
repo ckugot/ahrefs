@@ -1,5 +1,5 @@
 // Normalize Carousel Heights - pass in Bootstrap Carousel items.
-$.fn.carouselHeights = function() {
+$.fn.equalHeights = function() {
 
     var items = $(this), //grab all slides
         heights = [], //create empty array to store height values
@@ -24,7 +24,7 @@ $.fn.carouselHeights = function() {
         heights.length = 0;
 
         items.each(function() {
-            $(this).css('height','0'); //reset min-height
+            $(this).css('height', ''); //reset min-height
         });
         normalizeHeights(); //run it again
     });
@@ -34,7 +34,8 @@ $.fn.carouselHeights = function() {
 $(function($){
 
     $(window).on('load', function(){
-        $('.carousel .item').carouselHeights();
+        $('#testimonials-carousel .item').equalHeights();
+        $('#tools-carousel .item').equalHeights();
     });
 
 });

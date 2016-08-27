@@ -3,30 +3,42 @@
 
 
 .tools-tabs {
+
+
   &.carousel-indicators {
     position: relative;
+    z-index: 2;
     bottom: auto;
     left: auto;
-    z-index: inherit;
     width: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: {
+      left: auto;
+      right: auto;
+      bottom: 70px;
+    }
     padding-left: 0;
     list-style: none;
     text-align: center;
     display: table;
 
+    border-bottom: 1px solid $gray-lighter;
+
+    @include respond((width border left position margin-top), (xs: (60px, none, -15px, absolute, 20px) ));
+
     li {
-      float: none;
-      display: table-cell;
-      width: floor(100%/6);
+      float: left;
+      display: block;
       height: auto;
-      margin: 0;
+      margin: 0 0 25px 0;
       text-indent: 0;
       border: none;
       border-radius: 0;
       background: none;
       cursor: default;
+
+      width: floor(100%/6);
+
+      @include respond((width font-size margin-bottom), (xs: 60px 12px 13px, sm: floor(100%/3) ));
 
       .tab-icon {
         background-color: $brand-success;
@@ -35,13 +47,19 @@
         margin: {
           top: 0;
           right: auto;
-          bottom: 10px;
+          bottom: 20px;
           left: auto;
         }
+        box-sizing: border-box;
 
         @include square(70px);
-        box-sizing: border-box;
-        margin-bottom: $line-height-computed;
+        @include respond(
+              (width height margin-bottom padding border-radius),
+              (xs: (55px, 40px, 3px, 3px, 5px) ));
+        img {
+          @include size(auto, 100%);
+        }
+
       }
 
       > a {
@@ -51,14 +69,35 @@
         border: none;
         min-width: 150px;
         cursor: pointer;
-        &:hover {
+        &:hover,
+        &:focus {
           text-decoration: none;
           background-color: transparent;
+          .tab-icon {
+            background-color: lighten($brand-success, 5%);
+          }
         }
+
       }
 
       &.active {
         background: none; // indicator override
+        margin: {
+          left: 0;
+          right: 0;
+        }
+
+        &:after { // the line of active (responsive)
+          content: "";
+          position: absolute;
+          display: block;
+          border-bottom: 1px solid $brand-primary;
+          bottom: 0;
+          // same width as item
+          width: floor(100%/6);
+          @include respond((width display), (xs: null none, sm: floor(100%/3) ));
+        }
+
         .tab-icon {
           background-color: $brand-primary;
         }
@@ -70,34 +109,37 @@
             color: $text-color;
             background-color: $nav-tabs-active-link-hover-bg;
             border-bottom-color: $brand-primary;
+            .tab-icon {
+              background-color: $brand-primary;
+            }
           }
         }
       }
 
     }
-
   }
-
 }
 
-.tools-content:before {
-  content: '';
-  position: absolute;
-  display: block;
-  border-top: 1px solid $gray-lighter;
-  width: 100%;
-  left: 0;
-  z-index: -1;
+.carousel-inner.tools-content {
+  overflow: visible;
+  font-size: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .tools-screenshot {
   overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
   padding: 0 16px;
   margin: 0 -16px;
+  @include respond((margin-right overflow margin-top margin-bottom),(xs: -30px visible 20px 25px));
+
   img {
     height: 500px;
     width: auto;
     border-radius: 5px;
     box-shadow: 0 24px 16px rgba(0,0,0, .13);
+    @include respond((height width),(xs: auto 120%, sm: 430px));
   }
 }

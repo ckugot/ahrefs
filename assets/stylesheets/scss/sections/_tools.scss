@@ -1,3 +1,22 @@
 #section-tools {
+  @include respond((overflow-x),(xs: visible));
 
+  padding-bottom: 0;
+
+  .section-title {
+    margin-bottom: 2ex;
+  }
+
+  .tools-content {
+    font-size: 18px;
+    @include respond((font-size), (xs: 15px, sm: 16px));
+    h3 {
+      font-size: 38px;
+      @include respond((font-size), (xs: 20px, sm: 32px));
+    }
+  }
+
+  #tools-carousel {
+    @include respond((padding-left),(xs: 50px));
+  }
 }
